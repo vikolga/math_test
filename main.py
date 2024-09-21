@@ -1,9 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-QUESTION = 'x%5E%7B2%7D-3x%2B2%3D0'
-MAIN_URL_MATH = 'https://mathsolver.microsoft.com/ru/solve-problem/'
+from constants import MAIN_URL_MATH, QUESTION
 
 
 if __name__ == '__main__':
@@ -21,4 +19,3 @@ if __name__ == '__main__':
     for i in range(len(result_2)):
         dict_res[result_1[i].text] = result_2[i].text
     print(dict_res)
-
