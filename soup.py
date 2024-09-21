@@ -8,6 +8,7 @@ MAIN_URL_MATH = 'https://mathsolver.microsoft.com/ru/solve-problem/'
 
 if __name__ == '__main__':
     response = requests.get(MAIN_URL_MATH + QUESTION)
+    response.encoding = 'utf-8'
     soup = BeautifulSoup(response.text, features='lxml')
     reshenie = soup.find('div', class_='TemplateSelector_solutionOptions__yKoQF TemplateSelector_multi__1lZyB')
     result_1 = reshenie.find_all('div', class_='TemplateSelector_name__6oev8')
