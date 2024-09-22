@@ -5,9 +5,8 @@
 
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=ffffff&color=013220)](https://www.python.org/)&nbsp;
 ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-DC382D.svg?&style=flat&logo=BeautifulSoup&logoColor=white)&nbsp;
-![Selenium]([https://img.shields.io/badge/BeautifulSoup-DC382D.svg](https://img.shields.io/badge/Framework-Selenium-brightgreen)?&style=flat&logo=BeautifulSoup&logoColor=white)&nbsp;
-![Selenium]<img src=https://img.shields.io/badge/Framework-Selenium-brightgreen>&nbsp;
-![Webdriver]<img src=https://img.shields.io/badge/WebDriver-ChromeDriver-blue>&nbsp;
+<img src=https://img.shields.io/badge/Framework-Selenium-brightgreen>&nbsp;
+<img src=https://img.shields.io/badge/WebDriver-ChromeDriver-blue>&nbsp;
 
 
 ## Оглавление
