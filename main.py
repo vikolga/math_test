@@ -17,18 +17,15 @@ if __name__ == '__main__':
     for ans in result:
         result_1.append(ans.text)
     result_2 = []
-    sleep(3)
     driver = webdriver.Chrome()
     driver.get(MAIN_URL_MATH + QUESTION)
     driver.find_element(By.CLASS_NAME, 'ms-Button.ms-Button--primary.CardButton_cardButton__KYZhg.root-164').click()
     for answer in result_1:
         driver.find_element(By.XPATH, f'//button[normalize-space()="{answer}"]').click()
-        sleep(3)
-        result = soup.find('div', attrs={'class':'Step_stepPreview__pKL0W'})
-        result_2.append(result)
+        result = driver.find_element(By.CLASS_NAME, 'Steps_solutionSteps__a7lQq')
+        result_2.append(result.text)
 
     # result_2 = soup.find_all('div', attrs={'class':'Steps_solutionSteps__a7lQq'})
     dict_res = {}
-    for i in range(len(result_2)):
-        dict_res[result_1[i]] = result_2[i].text
-    print(dict_res)
+    answer_res = dict(zip(result_1, result_2))
+    print(answer_res)
