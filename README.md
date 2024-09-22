@@ -4,9 +4,9 @@
 Выполняется парсинг данных со страницы https://mathsolver.microsoft.com/ru/solve-problem/x%5E%7B2%7D-3x%2B2%3D0.Парсер подготавливает данные и сохраняет их в формат json.
 
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=ffffff&color=013220)](https://www.python.org/)&nbsp;
-[![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-DC382D.svg?&style=flat&logo=BeautifulSoup&logoColor=white)]&nbsp;
-[![Selenium]<img src=https://img.shields.io/badge/Framework-Selenium-brightgreen>]&nbsp;
-[![Webdriver]<img src=https://img.shields.io/badge/WebDriver-ChromeDriver-blue>]&nbsp;
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-DC382D.svg?&style=flat&logo=BeautifulSoup&logoColor=white)&nbsp;
+![Selenium]<img src=https://img.shields.io/badge/Framework-Selenium-brightgreen>&nbsp;
+![Webdriver]<img src=https://img.shields.io/badge/WebDriver-ChromeDriver-blue>&nbsp;
 
 
 ## Оглавление
