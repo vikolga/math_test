@@ -1,12 +1,16 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
+
+load_dotenv()
 
 url_pdf = 'https://api.mathpix.com/v3/pdf/'
 url_converter = 'https://api.mathpix.com/v3/converter/'
 
-APP_ID = '_100__0660c1_467c9e'
-APP_KEY = 'dd95a749c9a33bd2e3626296303bc9349163e18b3437cc08e3017b039bcca0fd'
+APP_ID = os.getenv('APP_ID')
+APP_KEY = os.getenv('APP_KEY')
 
 options = {
     "conversion_formats": {"docx": True, "tex.zip": True},
@@ -35,6 +39,7 @@ while ans != '"completed"':
                            }
                            )
     ans = rez.text.split(',')[0].split(':')[1]
+    print(ans)
 
 
 url = url_pdf + pdf_id + ".md"
