@@ -1,4 +1,5 @@
 # import re
+import re
 import signal
 import sys
 import pandas as pd
@@ -54,19 +55,24 @@ def get_oglavlenie_from_markdown(questions):
     # считываем файл
     length = len(questions)
     oglavlenie = []
+    start_point = None  # Инициализация переменной start_point
 
-    # фоормируем список с оглавлением
+    # формируем список с оглавлением
     for i in range(length):
-        if questions[i].startswith('§'):
-            q = questions[i].split('.')[1]
-            q = q.strip(' ')
+        line = questions[i]  # Обработка только текущей строки
+        match = re.match(r'§\d+\.\s+[\u4e00-\u9fff\s]+\.{3,}\s+\d+\n', line)  # Добавим захватывающую группу
+        if match:
+            q = match.group(0).strip().upper()
+            q = ' '.join(q.split(' ')[1:-1])
+            q = q.strip('. ')
             ans = upload_string_to_chat(q)
             oglavlenie.append(ans)
-        elif oglavlenie != []:
-            start_point = i + 1
+        elif oglavlenie and start_point is None:
+            start_point = i + 1  # Зафиксируем точку старта
             break
         else:
             continue
+
     return (oglavlenie, start_point)
 
 
